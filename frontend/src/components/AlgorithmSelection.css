@@ -1,0 +1,122 @@
+.algorithm-selection-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #3a4fb7, #a1c4fd);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+}
+
+.algorithm-selection-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.algorithm-selection-box h2 {
+    font-size: 2.5rem;
+    color: #02126d;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+    visibility: visible;
+    opacity: 1;
+}
+
+.algorithm-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.algorithm-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #6573ff, #8e99ff);
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.algorithm-card .algorithm-description {
+    font-size: 0.9rem;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    bottom: -15px;
+}
+
+.algorithm-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.algorithm-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+    background: linear-gradient(135deg, #8e99ff, #b0c0ff);
+}
+
+.algorithm-card:hover .algorithm-name{
+    visibility: hidden;
+    opacity: 1;
+}
+
+.algorithm-card:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.algorithm-card:hover .algorithm-description {
+    visibility: visible;
+    opacity: 1;
+    color: #02126d;
+    align-items: center;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+    .algorithm-selection-box {
+        padding: 20px;
+    }
+
+    .algorithm-selection-box h2 {
+        font-size: 2rem;
+    }
+
+    .algorithm-card {
+        font-size: 1rem;
+        padding: 12px 16px;
+    }
+}

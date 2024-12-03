@@ -1,0 +1,151 @@
+.page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #3a4fb7, #a1c4fd);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.landing-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 40px;
+    flex: 7.5;
+    color: #ffffff;
+}
+
+.content {
+    max-width: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: fadeIn 0.8s ease-in-out;
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 3.3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #e8eaf6;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+}
+
+p {
+    font-size: 1.4rem;
+    color: #d1d9ff;
+    margin-bottom: 30px;
+}
+
+.file-upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.file-upload-form input[type="file"] {
+    padding: 14px;
+    border: 2px solid #5a74ff;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #5a74ff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.file-upload-form input[type="file"]:hover {
+    border-color: #8696ff;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.file-upload-form button {
+    background: linear-gradient(135deg, #6573ff, #8e99ff);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 28px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 200px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.file-upload-form button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.35);
+    background: linear-gradient(135deg, #8e99ff, #b0c0ff);
+}
+
+.upload-message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
+
+.graphic {
+    width: 650px;
+    height: 400px;
+    background-image: url('../images/charts.jpg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    animation: fadeInRight 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .landing-page {
+        flex-direction: column;
+        padding: 20px;
+        align-items: center;
+    }
+
+    .content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .graphic {
+        width: 90%;
+        height: 250px;
+        margin-top: 30px;
+    }
+
+    .file-upload-form button {
+        width: 100%;
+    }
+}
